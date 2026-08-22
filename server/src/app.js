@@ -10,7 +10,7 @@ import conversationRoutes from "./routes/conv.route.js";
 dotenv.config();
 const app = express();
 
-app.use(cors({ origin: "https://instagram-clone-pink.vercel.app", credentials: true }));
+app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
